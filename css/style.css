@@ -1,0 +1,64 @@
+body {
+    font-family: 'Roboto Mono', "monospace", "Georgia", "Times", "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 34px;
+    color: #777777;
+    background: url("../images/connectwork.jpg");
+    margin:auto;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* general */
+  
+  .container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    float: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-family: 'Roboto Mono', "monospace", "Georgia", "Times", "Times New Roman", serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #474959;
+  }
+  
+  h1 {
+    font-size: 27px;
+    border-bottom: 4px solid #B6a9b6;
+  }
+  
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+  
+  /* header */
+  
+  #masterhead {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    margin-top:0px;
+    overflow: auto;
+    color: #f8f6f6;
+    background: #131313;
+    border-bottom: 3px solid #dab43c;
+  }
+  
