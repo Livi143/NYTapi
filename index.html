@@ -7,9 +7,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+<header>
+    <h1>New York Times Search</h1>
+</header>
 <body>
  <section>
-        <div class="container"></div>
+        <div class="container">
+                <form action="/action_page.php">
+                    <label for="term">Search Term:</label>
+                    <input type="text" id="term" placeholder="Write something here">
+                      
+                    <label for="records">Number of Records to Retrieve:</label>
+                    <input type="text" id="records"  placeholder="Write something here">
+                      
+                    <label for="subject">Start Year(Optional):</label>
+                    <textarea id="start-year" placeholder="Write something here" style="height:200px"></textarea>
+                    
+                    <label for="subject">End Year(Optional):</label>
+                    <textarea id="end-year" placeholder="Write something here" style="height:200px"></textarea>
+                    <br>
+                    <input type="submit" value="Submit">
+                  </form>
+        </div>
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="javascript/app.js"></script>
