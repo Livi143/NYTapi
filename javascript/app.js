@@ -30,3 +30,25 @@
 // second: concactonate towards the api key string
 // what does the API string need to look like? 
 // then send the AJAX call to NYT
+
+
+$("#entry").submit(function( event )  {
+    console.log("button clicked");
+// Built by LucyBot. www.lucybot.com
+// this needs to be in a function
+// var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+// url += '?' + $.param({
+//   'api-key': "d2370443fa244a039a13b98495f3ed14",
+//   'q': "giants",
+//   'fl': "web_url",
+//   'page': 1
+// });
+// $.ajax({
+//   url: url,
+//   method: 'GET',
+// }).done(function(result) {
+//   console.log(result);
+// }).fail(function(err) {
+//   throw err;
+// });
+})
