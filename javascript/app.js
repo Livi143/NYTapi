@@ -18,3 +18,15 @@
 * Understand what format the URL should look like to make an Article Call. (Hint: Use the API Console!!)
 
 * Experiment with console logging various fields.*/
+
+
+// first: get a way to grab the info from the form input fields: 
+// unpon clicking the form: this is the event handler, which was: 
+// 1) Search Term
+// 2) Number of Records to Retrieve
+// 3) Start Year(Optional)
+// 4) End Year(Optional)
+ 
+// second: concactonate towards the api key string
+// what does the API string need to look like? 
+// then send the AJAX call to NYT
