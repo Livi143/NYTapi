@@ -34,21 +34,32 @@
 
 $("#entry").submit(function( event )  {
     console.log("button clicked");
-// Built by LucyBot. www.lucybot.com
+    var term = $('#entry').find('input[id="term"]').val();
+    console.log("term text"+ term);
+    var records = $('#entry').find('input[id="records"]').val();
+    console.log("term text"+ records);
+    var startYear = $('#entry').find('input[id="start-year"]').val();
+    console.log("start-year"+ startYear); 
+    var endYear = $('#entry').find('input[id="end-year"]').val();
+    console.log("End year"+ endYear);   
+
+    // Built by LucyBot. www.lucybot.com
 // this needs to be in a function
-// var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-// url += '?' + $.param({
-//   'api-key': "d2370443fa244a039a13b98495f3ed14",
-//   'q': "giants",
-//   'fl': "web_url",
-//   'page': 1
-// });
-// $.ajax({
-//   url: url,
-//   method: 'GET',
-// }).done(function(result) {
-//   console.log(result);
-// }).fail(function(err) {
-//   throw err;
-// });
+var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+url += '?' + $.param({
+  'api-key': "d2370443fa244a039a13b98495f3ed14",
+  'q': term,
+  'fl': "web_url",
+  'begin_date': startYear,
+  'end_date': endYear,
+  'page': 1
+});
+$.ajax({
+  url: url,
+  method: 'GET',
+}).done(function(result) {
+  console.log(result);
+}).fail(function(err) {
+  throw err;
+});
 })
