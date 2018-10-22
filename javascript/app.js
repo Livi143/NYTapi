@@ -45,10 +45,10 @@ $("#entry").submit(function( event )  {
 
     if (startYear.length ===0 ) {
         startYear="18000101"
-    };
+    }
     if (endYear.length===0 ) {
         endYear="20181010"
-    };
+    }
     // Built by LucyBot. www.lucybot.com
     // this needs to be in a function
 
