@@ -43,23 +43,34 @@ $("#entry").submit(function( event )  {
     var endYear = $('#entry').find('input[id="end-year"]').val();
     console.log("End year"+ endYear);   
 
+    if (startYear.length ===0 ) {
+        startYear="18000101"
+    };
+    if (endYear.length===0 ) {
+        endYear="20181010"
+    };
     // Built by LucyBot. www.lucybot.com
-// this needs to be in a function
-var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-url += '?' + $.param({
-  'api-key': "d2370443fa244a039a13b98495f3ed14",
-  'q': term,
-  'fl': "web_url",
-  'begin_date': startYear,
-  'end_date': endYear,
-  'page': 1
-});
-$.ajax({
-  url: url,
-  method: 'GET',
-}).done(function(result) {
-  console.log(result);
-}).fail(function(err) {
-  throw err;
-});
+    // this needs to be in a function
+
+
+
+    for (var page = 0; page < 10; page++) {
+        var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+        url += '?' + $.param({
+            'api-key': "d2370443fa244a039a13b98495f3ed14",
+            'q': term,
+            'fl': "web_url",
+            'begin_date': startYear,
+            'end_date': endYear,
+            'page': page
+        });
+        $.ajax({
+            url: url,
+            method: 'GET',
+        }).done(function(result) {
+            console.log(result);
+        }).fail(function(err) {
+            throw err;
+        });
+    }
 })
