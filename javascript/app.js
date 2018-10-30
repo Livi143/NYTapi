@@ -21,6 +21,7 @@ api key d2370443fa244a039a13b98495f3ed14
 * Experiment with console logging various fields.*/
 
 
+<<<<<<< HEAD
 
 
 /*# New York Times Article Search - Phase 02
@@ -47,3 +48,59 @@ console.log(
 //## All-Together
 
 //* Display the HTML content!!
+=======
+// first: get a way to grab the info from the form input fields: 
+// unpon clicking the form: this is the event handler, which was: 
+// 1) Search Term
+// 2) Number of Records to Retrieve
+// 3) Start Year(Optional)
+// 4) End Year(Optional)
+ 
+// second: concactonate towards the api key string
+// what does the API string need to look like? 
+// then send the AJAX call to NYT
+
+
+$("#entry").submit(function( event )  {
+    console.log("button clicked");
+    var term = $('#entry').find('input[id="term"]').val();
+    console.log("term text"+ term);
+    var records = $('#entry').find('input[id="records"]').val();
+    console.log("term text"+ records);
+    var startYear = $('#entry').find('input[id="start-year"]').val();
+    console.log("start-year"+ startYear); 
+    var endYear = $('#entry').find('input[id="end-year"]').val();
+    console.log("End year"+ endYear);   
+
+    if (startYear.length ===0 ) {
+        startYear="18000101"
+    }
+    if (endYear.length===0 ) {
+        endYear="20181010"
+    }
+    // Built by LucyBot. www.lucybot.com
+    // this needs to be in a function
+
+
+
+    for (var page = 0; page < 10; page++) {
+        var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+        url += '?' + $.param({
+            'api-key': "d2370443fa244a039a13b98495f3ed14",
+            'q': term,
+            'fl': "web_url",
+            'begin_date': startYear,
+            'end_date': endYear,
+            'page': page
+        });
+        $.ajax({
+            url: url,
+            method: 'GET',
+        }).done(function(result) {
+            console.log(result);
+        }).fail(function(err) {
+            throw err;
+        });
+    }
+})
+>>>>>>> 49b2f6dc01e5cc35b805656aa89379aea111cc92

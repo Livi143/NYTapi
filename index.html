@@ -13,25 +13,27 @@
 <body>
  <section>
         <div class="container">
-                <form action="/action_page.php">
+                <form id="entry" onsubmit = "return false"> 
                     <label for="term">Search Term:</label><br>
                     <input type="text" id="term" placeholder="Write something here" style="width:800px">
-                      <br>
+                    <br>
                     <label for="records">Number of Records to Retrieve:</label><br>
                     <input type="text" id="records"  placeholder="Write something here" style="width:800px">
-                      <br>
-                    <label for="subject">Start Year(Optional):</label><br>
-                    <textarea id="start-year" placeholder="Write something here" style="width:800px"></textarea>
                     <br>
-                    <label for="subject">End Year(Optional):</label><br>
-                    <textarea id="end-year" placeholder="Write something here" style="width:800px"></textarea>
+                    
+                    <label for="start-year">Start Year:</label><br>
+                    <input type="text" id="start-year" placeholder="Write something here" style="width:800px">
                     <br>
-                    <input type="submit" value="Submit">
+                    <label for="end-year">End Year:</label><br>
+                    <input type="text" id="end-year" placeholder="Write something here" style="width:800px">
+                    <!-- <label for="end-year">End Year(Optional):</label><br>
+                    <textarea id="end-year" placeholder="Write something here" style="width:800px"></textarea> -->
+                    <br>
                     <input type="submit" value="Submit">
                   </form>
         </div>
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="javascript/app.js"></script>
+    <script src ="javascript/app.js"></script> 
 </body>
 </html>
